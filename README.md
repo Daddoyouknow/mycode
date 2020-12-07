@@ -2,7 +2,7 @@
 Learning to track my code
 
 This repo is the begining of my script training
-
+sentence about wanting to learn how to version control projects with git
 ##getting started
 
 These instructions will get you a copy of the project up and running on your local machine
