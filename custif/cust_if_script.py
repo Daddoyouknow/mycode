@@ -13,4 +13,3 @@ elif question1 != "Atlanta":
 else:
     print("aye watcha DOIN MAAAAN!!!")
 
-done
