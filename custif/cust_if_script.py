@@ -10,4 +10,7 @@ if question1 == "Atlanta":
 elif question1 != "Atlanta":
     print("WRONG!!think again")
 
+else:
+    print("aye watcha DOIN MAAAAN!!!")
 
+done
