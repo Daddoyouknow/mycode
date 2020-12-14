@@ -12,7 +12,7 @@ print( "1.bulbasaur  2.charizard 3.charmander 4.charmeleon 5.pikachu 6.squirtle"
 choice = input( "which Pokemon would you like to see? choose a number:" )
 #print( "you would like to learn more about:" + choice) 
 
-#this is our library of pokemon images to choose from assigned to their variable
+#this is our variables for pokemon images to choose from 
 bulb = open("bulbasaur.ascii")
 zard = open("charizard.ascii")
 mander = open("charmander.ascii")
@@ -20,11 +20,14 @@ meleon = open("charmeleon.ascii")
 pika = open("pikachu.ascii")
 squirt = open("squirtle.ascii")
 
-#trying to make a while loop that will take the user back to the initial question if the input >6
-#while choice >> 6
-    #choice = input( "which Pokemon would you like to see? choose a number:" )
-          
-          #this is our loop for display
+#trying to make a while loop that will take the user back to the initial question if the input >7
+while choice > "6":
+   #print(input( "which Pokemon would you like to see? choose a number:" )
+    print( "1.bulbasaur  2.charizard 3.charmander 4.charmeleon 5.pikachu 6.squirtle""\n" )
+    choice = input( "Sorry?!? that wasn't an option. Please choose a number from above :" )
+#print( "you would like to learn more about:" + choice) 
+
+#this is our loop for display
 if choice == "1":
     print("here is an image of bulbasaur")
     print(bulb.read())
@@ -43,8 +46,8 @@ elif choice == "5":
 elif choice == "6":
     print("here is an image of squirtle")
     print(squirt.read())
-else:                 # if answer was outside of choice range
-        print('Sorry. Try again!')
+#else:                 # if answer was outside of choice range
+       # print('Sorry. Try again!')
 
 #print( "you would like to learn more about:" + choice) 
 #list = [ "1.bulbasaur  2.charizard 3.charmander 4.charmeleon 4.pikachu 5.squirtle" ]
