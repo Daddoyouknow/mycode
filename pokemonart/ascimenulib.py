@@ -5,30 +5,50 @@ art = [{"name": "Bulbasaur", "ascii": "bulbasaur.ascii"}, {"name": "Charizard", 
         {"name": "Pikachu", "ascii": "pikachu.ascii"}, {"name": "Squirtle", "ascii": "squirtle.ascii"}, 
         {"name": "Quit", "ascii": "pokeball.ascii"}] 
 
-system("clear")
-title = open("pokemontitle.ascii")
-print(title.read())
-print("Welcome to Pokemon Print!!""\n")
-print("---------------------------------------------------------------\n")    
-title.close
-while True:
-    for ind, pokemon in enumerate(art):
-        print(f"{ind}. {pokemon['name']}")
-    choice = int(input("Enter the number of the pokemon you would like to see: "))
-    o = open(art[choice]["ascii"])
-    asci = o.read()
-    if choice < 6:
-        system("clear")
-        print(art[choice]["name"] + " I CHOOSE YOU!!!\n ")
-        print(asci)
-    elif choice == 6:
-        system("clear")
-        print(asci)
-        print("\nThank you for coming!!! Gotta Catch 'EM All!!!")
-        quit( 
-                )
-   # else:
-     #   print("sorry thats not a valid choice. Try again...\n")    
+def title(): 
+    system("clear")
+    title = open("pokemontitle.ascii")
+    print(title.read())
+    print("Welcome to Pokemon Print!!""\n")
+    print("---------------------------------------------------------------\n")    
+    title.close
+
+def main():
+    while True:
+        for ind, pokemon in enumerate(art):
+            print(f"{ind}. {pokemon['name']}")
+        #choice = int(input("Enter the number of the pokemon you would like to see: "))
+        #o = open(art[choice]["ascii"])
+        #asci = o.read()
+        #try made anything outside of numbers an error
+        try:
+            choice = int(input("Enter the number of the pokemon you would like to see: "))
+            o = open(art[choice]["ascii"])
+            asci = o.read()
+        except ValueError as err:
+            system("clear")
+            print("\nSorry.. That isn't an option.. Please try again---\_('_')_/--- \n")
+            continue
+        except IndexError as err:
+            system("clear")
+            print("\nSorry.. That isn't an option.. Please try again---\_('_')_/--- \n")
+            continue
+        if choice < 6:
+            system("clear")
+            print(art[choice]["name"] + " I CHOOSE YOU!!!\n ")
+            print(asci)
+        elif choice == 6:
+            system("clear")
+            print(asci)
+            print("\nThank you for coming!!! Gotta Catch 'EM All!!!")
+            quit()
+        else:
+            choice >= "7"
+            print("try again")
+
+#run it
+title()
+main()
 
 #while True:
    # ui = choice
@@ -42,7 +62,4 @@ while True:
 
    # elif choice > 6:
      #   print("sorry thats not a valid choice. Try again...\n")
-#if choice == "6":
- #   print("Thank you for coming!!! Gotta Catch 'EM All!!!")    
-  #  break
 
